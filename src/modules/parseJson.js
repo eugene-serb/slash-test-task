@@ -2,6 +2,7 @@
 
 import Basket from '@/models/Basket.js';
 import Entry from '@/models/Entry.js';
+import getJsonValue from '@/modules/getJsonValue.js';
 
 async function parseJson(merchant) {
   let totalSum = 0;
@@ -19,12 +20,12 @@ async function parseJson(merchant) {
       goods.forEach(good => {
         entries.push(
           new Entry(
-            good.product.sku,
-            good.product.name,
-            good.basePrice.value,
-            good.totalPrice.value,
-            good.quantity,
-            'https:' + good.product.imageUrl
+            getJsonValue(good, merchant.rules.sku),
+            getJsonValue(good, merchant.rules.name),
+            getJsonValue(good, merchant.rules.price),
+            getJsonValue(good, merchant.rules.totalPrice),
+            getJsonValue(good, merchant.rules.quantity),
+            'https:' + getJsonValue(good, merchant.rules.photo)
           )
         );
       });
