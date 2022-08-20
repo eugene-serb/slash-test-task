@@ -1,9 +1,9 @@
 'use strict';
 
 class Basket {
-  constructor(totalSum, entries) {
-    this.totalSum = totalSum;
+  constructor(entries, totalSum) {
     this.entries = entries;
+    this.totalSum = totalSum;
   }
 }
 

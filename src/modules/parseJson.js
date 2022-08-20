@@ -1,12 +1,13 @@
 'use strict';
 
 import Basket from '@/models/Basket.js';
+import Entry from '@/models/Entry.js';
 
 async function parseJson(merchant) {
   let totalSum = 0;
   const entries = [];
 
-  await fetch(merchant.cart.url)
+  await fetch(merchant.rules.url)
     .then(response => {
       return response.json();
     })
@@ -16,22 +17,23 @@ async function parseJson(merchant) {
     })
     .then(goods => {
       goods.forEach(good => {
-        const entry = {
-          sku: good.product.sku,
-          name: good.product.name,
-          price: good.basePrice.value,
-          totalPrice: good.totalPrice.value,
-          quantity: good.quantity,
-          photo: 'https:' + good.product.imageUrl
-        };
-        entries.push(entry);
+        entries.push(
+          new Entry(
+            good.product.sku,
+            good.product.name,
+            good.basePrice.value,
+            good.totalPrice.value,
+            good.quantity,
+            'https:' + good.product.imageUrl
+          )
+        );
       });
     })
     .catch(error => {
       console.error(error);
     });
 
-  return new Basket(totalSum, entries);
+  return new Basket(entries, totalSum);
 }
 
 export default parseJson;
