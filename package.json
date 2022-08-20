@@ -1,6 +1,11 @@
 {
   "name": "disco",
-  "version": "0.3.0",
+  "version": "0.3.1",
+  "author": {
+    "name": "Eugene Serb",
+    "email": "eugene.serb@gmail.com",
+    "url": "https://eugene-serb.github.io/"
+  },
   "private": true,
   "scripts": {
     "start": "vue-cli-service build --mode development --watch",
