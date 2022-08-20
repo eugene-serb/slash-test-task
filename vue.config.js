@@ -1,7 +1,7 @@
 module.exports = {
   pages: {
     popup: {
-      template: 'public/browser-extension.html',
+      template: './public/browser-extension.html',
       entry: './src/popup/main.js',
       title: 'Popup'
     }
@@ -10,7 +10,7 @@ module.exports = {
     browserExtension: {
       componentOptions: {
         background: {
-          entry: 'src/background/index.js'
+          entry: './src/background/index.js'
         }
       }
     }

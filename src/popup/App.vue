@@ -7,8 +7,8 @@
       <Product
         class="container__product"
         v-for="item in basket.entries"
-        v-bind:product="item"
-        v-bind:key="item.sku"
+        :product="item"
+        :key="item.sku"
       />
     </div>
     <div v-if="basket" class="total-sum">Total sum: {{ basket.totalSum }}</div>
@@ -22,21 +22,18 @@ import Message from '@/components/Message.vue';
 export default {
   name: 'App',
   components: { Product, Message },
-
   data: () => {
     return {
       message: null,
       basket: null
     };
   },
-
   methods: {
     getBasket(data) {
       this.message = data.message;
       this.basket = data.basket;
     }
   },
-
   created() {
     chrome.extension.sendMessage('getBasket', this.getBasket);
   }
