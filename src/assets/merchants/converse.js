@@ -6,8 +6,8 @@ const converse = {
   rules: {
     mode: 'html',
     url: 'https://www.converse.com/uk/en/cart',
-    list: '.cart__items',
     totalPrice: '.order-totals__highlight > .value--highlight',
+    list: '.cart__items',
     good: {
       self: '.cart__item',
       sku: '.product-mini__sku > span.value',

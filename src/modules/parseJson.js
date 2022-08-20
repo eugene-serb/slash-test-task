@@ -13,19 +13,19 @@ async function parseJson(merchant) {
       return response.json();
     })
     .then(json => {
-      totalSum = json.data.totalPriceWithTax.value;
-      return json.data.entries;
+      totalSum = getJsonValue(json, merchant.rules.totalSum);
+      return getJsonValue(json, merchant.rules.list);
     })
     .then(goods => {
       goods.forEach(good => {
         entries.push(
           new Entry(
-            getJsonValue(good, merchant.rules.sku),
-            getJsonValue(good, merchant.rules.name),
-            getJsonValue(good, merchant.rules.price),
-            getJsonValue(good, merchant.rules.totalPrice),
-            getJsonValue(good, merchant.rules.quantity),
-            'https:' + getJsonValue(good, merchant.rules.photo)
+            getJsonValue(good, merchant.rules.good.sku),
+            getJsonValue(good, merchant.rules.good.name),
+            getJsonValue(good, merchant.rules.good.price),
+            getJsonValue(good, merchant.rules.good.totalPrice),
+            getJsonValue(good, merchant.rules.good.quantity),
+            'https:' + getJsonValue(good, merchant.rules.good.photo)
           )
         );
       });
