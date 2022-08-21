@@ -6,7 +6,7 @@ const newlook = {
   rules: {
     mode: 'json',
     url: 'https://www.newlook.com/uk/json/cart/currentCart.json',
-    totalSum: ['data', 'totalPriceWithTax', 'value'],
+    totalSum: ['data', 'totalPrice', 'value'],
     list: ['data', 'entries'],
     good: {
       sku: ['product', 'sku'],

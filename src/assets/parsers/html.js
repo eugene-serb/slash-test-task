@@ -19,7 +19,7 @@ async function parseHtml(merchant) {
     .then(doc => {
       const list = doc.querySelector(merchant.rules.list);
       totalSum = doc
-        .querySelector(merchant.rules.totalPrice)
+        .querySelector(merchant.rules.totalSum)
         .innerText.toString()
         .slice(1); // костыль мод;
       return list;
