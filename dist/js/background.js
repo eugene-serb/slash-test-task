@@ -1444,7 +1444,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_merchants_eugene_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/merchants/eugene.js */ \"./src/assets/merchants/eugene.js\");\n/* harmony import */ var _assets_merchants_newlook_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/merchants/newlook.js */ \"./src/assets/merchants/newlook.js\");\n/* harmony import */ var _assets_merchants_converse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/merchants/converse.js */ \"./src/assets/merchants/converse.js\");\n\n\n\n\n // � ������ �������� ����� �������� ���� ����� � ������� ���������� ���������\n// ���� �������� ��� �������\n\nconst merchants = [_assets_merchants_eugene_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], _assets_merchants_newlook_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], _assets_merchants_converse_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]];\n/* harmony default export */ __webpack_exports__[\"default\"] = (merchants);\n\n//# sourceURL=webpack:///./src/assets/merchants.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_merchants_custom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/merchants/custom.js */ \"./src/assets/merchants/custom.js\");\n/* harmony import */ var _assets_merchants_newlook_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/merchants/newlook.js */ \"./src/assets/merchants/newlook.js\");\n/* harmony import */ var _assets_merchants_converse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/merchants/converse.js */ \"./src/assets/merchants/converse.js\");\n\n\n\n\n\nconst merchants = [_assets_merchants_custom_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], _assets_merchants_newlook_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], _assets_merchants_converse_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]];\n/* harmony default export */ __webpack_exports__[\"default\"] = (merchants);\n\n//# sourceURL=webpack:///./src/assets/merchants.js?");
 
 /***/ }),
 
@@ -1460,15 +1460,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  mer
 
 /***/ }),
 
-/***/ "./src/assets/merchants/eugene.js":
+/***/ "./src/assets/merchants/custom.js":
 /*!****************************************!*\
-  !*** ./src/assets/merchants/eugene.js ***!
+  !*** ./src/assets/merchants/custom.js ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst eugene = {\n  merchantId: 'eugene.serb',\n  domain: 'https://eugene-serb.github.io/',\n  rules: {\n    mode: 'custom',\n    url: 'https://eugene-serb.github.io/'\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (eugene);\n\n//# sourceURL=webpack:///./src/assets/merchants/eugene.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst custom = {\n  merchantId: 'eugene.serb',\n  domain: 'https://eugene-serb.github.io/',\n  rules: {\n    mode: 'custom',\n    url: 'https://eugene-serb.github.io/'\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (custom);\n\n//# sourceURL=webpack:///./src/assets/merchants/custom.js?");
 
 /***/ }),
 
@@ -1481,6 +1481,66 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst eugene = {\n  merch
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merchantId: 'newlook',\n  domain: 'https://www.newlook.com/uk/',\n  rules: {\n    mode: 'json',\n    url: 'https://www.newlook.com/uk/json/cart/currentCart.json',\n    totalSum: ['data', 'totalPriceWithTax', 'value'],\n    list: ['data', 'entries'],\n    good: {\n      sku: ['product', 'sku'],\n      name: ['product', 'name'],\n      price: ['basePrice', 'value'],\n      totalPrice: ['totalPrice', 'value'],\n      quantity: ['quantity'],\n      photo: ['product', 'imageUrl']\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (newlook);\n\n//# sourceURL=webpack:///./src/assets/merchants/newlook.js?");
+
+/***/ }),
+
+/***/ "./src/assets/parsers.js":
+/*!*******************************!*\
+  !*** ./src/assets/parsers.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_parsers_html_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/parsers/html.js */ \"./src/assets/parsers/html.js\");\n/* harmony import */ var _assets_parsers_json_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/parsers/json.js */ \"./src/assets/parsers/json.js\");\n/* harmony import */ var _assets_parsers_custom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/parsers/custom.js */ \"./src/assets/parsers/custom.js\");\n/* harmony import */ var _assets_parsers_default_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets/parsers/default.js */ \"./src/assets/parsers/default.js\");\n\n\n\n\n\n\nconst parsers = {\n  html: _assets_parsers_html_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  json: _assets_parsers_json_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  custom: _assets_parsers_custom_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  stub: _assets_parsers_default_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (parsers);\n\n//# sourceURL=webpack:///./src/assets/parsers.js?");
+
+/***/ }),
+
+/***/ "./src/assets/parsers/custom.js":
+/*!**************************************!*\
+  !*** ./src/assets/parsers/custom.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n // ������ ����������� �������� ���� �����\n\nasync function parseCustom(merchant) {\n  let totalSum = 1337;\n  const entries = [];\n  entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](1, `Custom Good at ${merchant.merchantId}`, 1337, 1337, 1, 'https://eugene-serb.github.io/img/apple-touch-icon.png'));\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseCustom);\n\n//# sourceURL=webpack:///./src/assets/parsers/custom.js?");
+
+/***/ }),
+
+/***/ "./src/assets/parsers/default.js":
+/*!***************************************!*\
+  !*** ./src/assets/parsers/default.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n\n\n // ������ ��������\n\nasync function\n  /* merchant */\nparseDefault() {\n  let totalSum = 0;\n  const entries = [];\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseDefault);\n\n//# sourceURL=webpack:///./src/assets/parsers/default.js?");
+
+/***/ }),
+
+/***/ "./src/assets/parsers/html.js":
+/*!************************************!*\
+  !*** ./src/assets/parsers/html.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n\n\nasync function parseHtml(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.text();\n  }).then(html => {\n    const parser = new DOMParser();\n    const doc = parser.parseFromString(html, 'text/html');\n    return doc;\n  }).then(doc => {\n    const list = doc.querySelector(merchant.rules.list);\n    totalSum = doc.querySelector(merchant.rules.totalPrice).innerText.toString().slice(1); // костыль мод;\n\n    return list;\n  }).then(list => {\n    const goods = list.querySelectorAll(merchant.rules.good.self);\n    return goods;\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](good.querySelector(merchant.rules.good.sku).innerText, good.querySelector(merchant.rules.good.name).innerText, good.querySelector(merchant.rules.good.price).innerText.toString().slice(1), // костыль мод\n      good.querySelector(merchant.rules.good.totalPrice).innerText.toString().slice(1), // костыль мод\n      +good.querySelector(merchant.rules.good.quantity).innerText, // костыль мод\n      good.querySelector(merchant.rules.good.photo).src));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseHtml);\n\n//# sourceURL=webpack:///./src/assets/parsers/html.js?");
+
+/***/ }),
+
+/***/ "./src/assets/parsers/json.js":
+/*!************************************!*\
+  !*** ./src/assets/parsers/json.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n/* harmony import */ var _modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/getJsonValue.js */ \"./src/modules/getJsonValue.js\");\n\n\n\n\n\n\nasync function parseJson(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.json();\n  }).then(json => {\n    totalSum = Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.totalSum);\n    return Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.list);\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.sku), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.name), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.price), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.totalPrice), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.quantity), 'https:' + Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.photo) // ������� ���\n      ));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseJson);\n\n//# sourceURL=webpack:///./src/assets/parsers/json.js?");
 
 /***/ }),
 
@@ -1528,7 +1588,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nclass Entry {\n  construc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_merchants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/merchants.js */ \"./src/assets/merchants.js\");\n/* harmony import */ var _modules_getCurrentUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/modules/getCurrentUrl.js */ \"./src/modules/getCurrentUrl.js\");\n/* harmony import */ var _modules_parser_parse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/parser/parse.js */ \"./src/modules/parser/parse.js\");\n\n\n\n\n\n\nconst getBasket = async () => {\n  const currentUrl = await Object(_modules_getCurrentUrl_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  const currentMerchant = _assets_merchants_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].find(merchant => currentUrl.includes(merchant.domain));\n\n  if (!currentMerchant) {\n    return {\n      message: 'Этот сайт не является партнером приложения'\n    };\n  } // ToDo: необходимо спарсить все товары добавленные в корзину на сайте\n  // если корзина пуста выводить соответствующее сообщение\n\n\n  const basket = await Object(_modules_parser_parse_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(currentMerchant);\n  const result = {};\n  basket.entries.length ? result.basket = basket : result.message = 'Корзина пуста';\n  return result;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getBasket);\n\n//# sourceURL=webpack:///./src/modules/getBasket.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_merchants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/merchants.js */ \"./src/assets/merchants.js\");\n/* harmony import */ var _modules_getCurrentUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/modules/getCurrentUrl.js */ \"./src/modules/getCurrentUrl.js\");\n/* harmony import */ var _modules_parse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/parse.js */ \"./src/modules/parse.js\");\n\n\n\n\n\n\nconst getBasket = async () => {\n  const currentUrl = await Object(_modules_getCurrentUrl_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  const currentMerchant = _assets_merchants_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].find(merchant => currentUrl.includes(merchant.domain));\n\n  if (!currentMerchant) {\n    return {\n      message: 'Этот сайт не является партнером приложения'\n    };\n  } // ToDo: необходимо спарсить все товары добавленные в корзину на сайте\n  // если корзина пуста выводить соответствующее сообщение\n\n\n  const basket = await Object(_modules_parse_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(currentMerchant);\n  const result = {};\n  basket.entries.length ? result.basket = basket : result.message = 'Корзина пуста';\n  return result;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getBasket);\n\n//# sourceURL=webpack:///./src/modules/getBasket.js?");
 
 /***/ }),
 
@@ -1556,63 +1616,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction getJsonValue(jso
 
 /***/ }),
 
-/***/ "./src/modules/parser/getParser.js":
-/*!*****************************************!*\
-  !*** ./src/modules/parser/getParser.js ***!
-  \*****************************************/
+/***/ "./src/modules/getParser.js":
+/*!**********************************!*\
+  !*** ./src/modules/getParser.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_parser_parseHtml_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/modules/parser/parseHtml.js */ \"./src/modules/parser/parseHtml.js\");\n/* harmony import */ var _modules_parser_parseJson_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/modules/parser/parseJson.js */ \"./src/modules/parser/parseJson.js\");\n/* harmony import */ var _modules_parser_parseCustom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/parser/parseCustom.js */ \"./src/modules/parser/parseCustom.js\");\n // здесь подключаем парсеры\n\n\n\n // parseDefault\n// здесь передаём объект с парсерами\n// можно ещё вынести и этот объект в конфиги,\n// чтобы не лезть в код каждый при добавлении\n\nconst parsers = {\n  html: _modules_parser_parseHtml_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  json: _modules_parser_parseJson_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  custom: _modules_parser_parseCustom_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n\nfunction getParser(mode) {\n  let result = null; // нужна функция по умолчанию\n  // здесь ищем нужный и отдаём в функцию парс\n\n  Object.keys(parsers).forEach(key => {\n    if (mode == key) {\n      result = parsers[key];\n    }\n  });\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getParser);\n\n//# sourceURL=webpack:///./src/modules/parser/getParser.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/parsers.js */ \"./src/assets/parsers.js\");\n\n\n\n\nfunction getParser(mode) {\n  let result = null;\n  Object.keys(_assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(key => {\n    if (mode == key) {\n      result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][key];\n    }\n  });\n\n  if (result === null) {\n    result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]['stub'];\n  }\n\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getParser);\n\n//# sourceURL=webpack:///./src/modules/getParser.js?");
 
 /***/ }),
 
-/***/ "./src/modules/parser/parse.js":
-/*!*************************************!*\
-  !*** ./src/modules/parser/parse.js ***!
-  \*************************************/
+/***/ "./src/modules/parse.js":
+/*!******************************!*\
+  !*** ./src/modules/parse.js ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_parser_getParser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/modules/parser/getParser.js */ \"./src/modules/parser/getParser.js\");\n\n\n\n\nasync function parse(merchant) {\n  let basket = {};\n  const parser = Object(_modules_parser_getParser_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(merchant.rules.mode);\n  basket = await parser(merchant);\n  return basket;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parse);\n\n//# sourceURL=webpack:///./src/modules/parser/parse.js?");
-
-/***/ }),
-
-/***/ "./src/modules/parser/parseCustom.js":
-/*!*******************************************!*\
-  !*** ./src/modules/parser/parseCustom.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n // ������ ����������� �������� ���� �����\n\nasync function parseCustom(merchant) {\n  let totalSum = 1337;\n  const entries = [];\n  entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](1, `Custom Good at ${merchant.merchantId}`, 1337, 1337, 1, 'https://eugene-serb.github.io/img/apple-touch-icon.png'));\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseCustom);\n\n//# sourceURL=webpack:///./src/modules/parser/parseCustom.js?");
-
-/***/ }),
-
-/***/ "./src/modules/parser/parseHtml.js":
-/*!*****************************************!*\
-  !*** ./src/modules/parser/parseHtml.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n\n\nasync function parseHtml(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.text();\n  }).then(html => {\n    const parser = new DOMParser();\n    const doc = parser.parseFromString(html, 'text/html');\n    return doc;\n  }).then(doc => {\n    const list = doc.querySelector(merchant.rules.list);\n    totalSum = doc.querySelector(merchant.rules.totalPrice).innerText.toString().slice(1); // костыль мод;\n\n    return list;\n  }).then(list => {\n    const goods = list.querySelectorAll(merchant.rules.good.self);\n    return goods;\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](good.querySelector(merchant.rules.good.sku).innerText, good.querySelector(merchant.rules.good.name).innerText, good.querySelector(merchant.rules.good.price).innerText.toString().slice(1), // костыль мод\n      good.querySelector(merchant.rules.good.totalPrice).innerText.toString().slice(1), // костыль мод\n      +good.querySelector(merchant.rules.good.quantity).innerText, // костыль мод\n      good.querySelector(merchant.rules.good.photo).src));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseHtml);\n\n//# sourceURL=webpack:///./src/modules/parser/parseHtml.js?");
-
-/***/ }),
-
-/***/ "./src/modules/parser/parseJson.js":
-/*!*****************************************!*\
-  !*** ./src/modules/parser/parseJson.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n/* harmony import */ var _modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/getJsonValue.js */ \"./src/modules/getJsonValue.js\");\n\n\n\n\n\n\nasync function parseJson(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.json();\n  }).then(json => {\n    totalSum = Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.totalSum);\n    return Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.list);\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.sku), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.name), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.price), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.totalPrice), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.quantity), 'https:' + Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.photo) // ������� ���\n      ));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseJson);\n\n//# sourceURL=webpack:///./src/modules/parser/parseJson.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/modules/getParser.js */ \"./src/modules/getParser.js\");\n\n\n\n\nasync function parse(merchant) {\n  let basket = {};\n  const parser = Object(_modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(merchant.rules.mode);\n  basket = await parser(merchant);\n  return basket;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parse);\n\n//# sourceURL=webpack:///./src/modules/parse.js?");
 
 /***/ }),
 

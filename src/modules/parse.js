@@ -1,6 +1,6 @@
 'use strict';
 
-import getParser from '@/modules/parser/getParser.js';
+import getParser from '@/modules/getParser.js';
 
 async function parse(merchant) {
   let basket = {};

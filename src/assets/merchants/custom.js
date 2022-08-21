@@ -1,6 +1,6 @@
 'use strict';
 
-const eugene = {
+const custom = {
   merchantId: 'eugene.serb',
   domain: 'https://eugene-serb.github.io/',
   rules: {
@@ -9,4 +9,4 @@ const eugene = {
   }
 };
 
-export default eugene;
+export default custom;
