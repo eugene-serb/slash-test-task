@@ -1,8 +1,8 @@
 'use strict';
 
-import parseHtml from '@/modules/parseHtml.js';
-import parseJson from '@/modules/parseJson.js';
-import parseCustom from '@/modules/parseCustom.js';
+import parseHtml from '@/modules/parsers/parseHtml.js';
+import parseJson from '@/modules/parsers/parseJson.js';
+import parseCustom from '@/modules/parsers/parseCustom.js';
 
 async function parse(merchant) {
   let basket = {};

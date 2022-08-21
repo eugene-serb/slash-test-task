@@ -25,7 +25,7 @@ async function parseJson(merchant) {
             getJsonValue(good, merchant.rules.good.price),
             getJsonValue(good, merchant.rules.good.totalPrice),
             getJsonValue(good, merchant.rules.good.quantity),
-            'https:' + getJsonValue(good, merchant.rules.good.photo)
+            'https:' + getJsonValue(good, merchant.rules.good.photo) // костыль мод
           )
         );
       });

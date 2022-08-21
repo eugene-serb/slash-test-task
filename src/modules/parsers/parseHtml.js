@@ -18,7 +18,10 @@ async function parseHtml(merchant) {
     })
     .then(doc => {
       const list = doc.querySelector(merchant.rules.list);
-      totalSum = doc.querySelector(merchant.rules.totalPrice).innerText;
+      totalSum = doc
+        .querySelector(merchant.rules.totalPrice)
+        .innerText.toString()
+        .slice(1); // костыль мод;
       return list;
     })
     .then(list => {
@@ -31,9 +34,16 @@ async function parseHtml(merchant) {
           new Entry(
             good.querySelector(merchant.rules.good.sku).innerText,
             good.querySelector(merchant.rules.good.name).innerText,
-            good.querySelector(merchant.rules.good.price).innerText,
-            good.querySelector(merchant.rules.good.totalPrice).innerText,
-            good.querySelector(merchant.rules.good.quantity).innerText,
+            good
+              .querySelector(merchant.rules.good.price)
+              .innerText.toString()
+              .slice(1), // костыль мод
+            good
+              .querySelector(merchant.rules.good.totalPrice)
+              .innerText.toString()
+              .slice(1), // костыль мод
+            +good.querySelector(merchant.rules.good.quantity).innerText,
+            // костыль мод
             good.querySelector(merchant.rules.good.photo).src
           )
         );

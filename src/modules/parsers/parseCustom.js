@@ -3,6 +3,8 @@
 import Basket from '@/models/Basket.js';
 import Entry from '@/models/Entry.js';
 
+// пример возможности добавить свой режим
+
 async function parseCustom(merchant) {
   let totalSum = 1337;
   const entries = [];
