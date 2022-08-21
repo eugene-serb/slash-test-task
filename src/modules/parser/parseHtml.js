@@ -50,6 +50,7 @@ async function parseHtml(merchant) {
       });
     })
     .catch(error => {
+      // eslint-disable-next-line
       console.error(error);
     });
 

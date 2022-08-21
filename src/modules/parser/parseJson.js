@@ -31,6 +31,7 @@ async function parseJson(merchant) {
       });
     })
     .catch(error => {
+      // eslint-disable-next-line
       console.error(error);
     });
 

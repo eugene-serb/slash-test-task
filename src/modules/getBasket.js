@@ -2,7 +2,7 @@
 
 import merchants from '@/assets/merchants.js';
 import getCurrentUrl from '@/modules/getCurrentUrl.js';
-import parse from '@/modules/parse.js';
+import parse from '@/modules/parser/parse.js';
 
 const getBasket = async () => {
   const currentUrl = await getCurrentUrl();
