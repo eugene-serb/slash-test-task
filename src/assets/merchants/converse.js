@@ -4,7 +4,7 @@ const converse = {
   merchantId: 'converse',
   domain: 'https://www.converse.com/uk',
   rules: {
-    mode: 'html',
+    parserMode: 'html',
     url: 'https://www.converse.com/uk/en/cart',
     list: {
       value: '.cart__items',

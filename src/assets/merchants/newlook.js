@@ -4,7 +4,7 @@ const newlook = {
   merchantId: 'newlook',
   domain: 'https://www.newlook.com/uk/',
   rules: {
-    mode: 'json',
+    parserMode: 'json',
     url: 'https://www.newlook.com/uk/json/cart/currentCart.json',
     list: {
       value: ['data', 'entries'],
@@ -36,7 +36,7 @@ const newlook = {
     },
     photo: {
       value: ['product', 'imageUrl'],
-      mods: ['prefixProtocol']
+      mods: ['addPrefixHttp']
     }
   }
 };

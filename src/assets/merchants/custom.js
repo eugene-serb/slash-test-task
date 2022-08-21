@@ -4,7 +4,7 @@ const custom = {
   merchantId: 'eugene.serb',
   domain: 'https://eugene-serb.github.io/',
   rules: {
-    mode: 'custom',
+    parserMode: 'custom',
     url: 'https://eugene-serb.github.io/'
   }
 };

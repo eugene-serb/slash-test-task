@@ -1456,7 +1456,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  merchantId: 'converse',\n  domain: 'https://www.converse.com/uk',\n  rules: {\n    mode: 'html',\n    url: 'https://www.converse.com/uk/en/cart',\n    list: {\n      value: '.cart__items',\n      mods: []\n    },\n    totalSum: {\n      value: '.order-totals__highlight > .value--highlight',\n      mods: ['sliceFirstChar']\n    },\n    self: {\n      value: '.cart__item',\n      mods: []\n    },\n    sku: {\n      value: '.product-mini__sku > span.value',\n      mods: []\n    },\n    name: {\n      value: '.product-mini__name > a',\n      mods: []\n    },\n    price: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    totalPrice: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    quantity: {\n      value: '.cart__item-qty > select > option[selected]',\n      mods: ['toInteger']\n    },\n    photo: {\n      value: '.product-mini__image-url > img',\n      mods: []\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (converse);\n\n//# sourceURL=webpack:///./src/assets/merchants/converse.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  merchantId: 'converse',\n  domain: 'https://www.converse.com/uk',\n  rules: {\n    parserMode: 'html',\n    url: 'https://www.converse.com/uk/en/cart',\n    list: {\n      value: '.cart__items',\n      mods: []\n    },\n    totalSum: {\n      value: '.order-totals__highlight > .value--highlight',\n      mods: ['sliceFirstChar']\n    },\n    self: {\n      value: '.cart__item',\n      mods: []\n    },\n    sku: {\n      value: '.product-mini__sku > span.value',\n      mods: []\n    },\n    name: {\n      value: '.product-mini__name > a',\n      mods: []\n    },\n    price: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    totalPrice: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    quantity: {\n      value: '.cart__item-qty > select > option[selected]',\n      mods: ['toInteger']\n    },\n    photo: {\n      value: '.product-mini__image-url > img',\n      mods: []\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (converse);\n\n//# sourceURL=webpack:///./src/assets/merchants/converse.js?");
 
 /***/ }),
 
@@ -1468,7 +1468,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  mer
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst custom = {\n  merchantId: 'eugene.serb',\n  domain: 'https://eugene-serb.github.io/',\n  rules: {\n    mode: 'custom',\n    url: 'https://eugene-serb.github.io/'\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (custom);\n\n//# sourceURL=webpack:///./src/assets/merchants/custom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst custom = {\n  merchantId: 'eugene.serb',\n  domain: 'https://eugene-serb.github.io/',\n  rules: {\n    parserMode: 'custom',\n    url: 'https://eugene-serb.github.io/'\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (custom);\n\n//# sourceURL=webpack:///./src/assets/merchants/custom.js?");
 
 /***/ }),
 
@@ -1480,7 +1480,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst custom = {\n  merch
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merchantId: 'newlook',\n  domain: 'https://www.newlook.com/uk/',\n  rules: {\n    mode: 'json',\n    url: 'https://www.newlook.com/uk/json/cart/currentCart.json',\n    list: {\n      value: ['data', 'entries'],\n      mods: []\n    },\n    totalSum: {\n      value: ['data', 'totalPrice', 'value'],\n      mods: []\n    },\n    sku: {\n      value: ['product', 'sku'],\n      mods: []\n    },\n    name: {\n      value: ['product', 'name'],\n      mods: []\n    },\n    price: {\n      value: ['basePrice', 'value'],\n      mods: []\n    },\n    totalPrice: {\n      value: ['totalPrice', 'value'],\n      mods: []\n    },\n    quantity: {\n      value: ['quantity'],\n      mods: []\n    },\n    photo: {\n      value: ['product', 'imageUrl'],\n      mods: ['prefixProtocol']\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (newlook);\n\n//# sourceURL=webpack:///./src/assets/merchants/newlook.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merchantId: 'newlook',\n  domain: 'https://www.newlook.com/uk/',\n  rules: {\n    parserMode: 'json',\n    url: 'https://www.newlook.com/uk/json/cart/currentCart.json',\n    list: {\n      value: ['data', 'entries'],\n      mods: []\n    },\n    totalSum: {\n      value: ['data', 'totalPrice', 'value'],\n      mods: []\n    },\n    sku: {\n      value: ['product', 'sku'],\n      mods: []\n    },\n    name: {\n      value: ['product', 'name'],\n      mods: []\n    },\n    price: {\n      value: ['basePrice', 'value'],\n      mods: []\n    },\n    totalPrice: {\n      value: ['totalPrice', 'value'],\n      mods: []\n    },\n    quantity: {\n      value: ['quantity'],\n      mods: []\n    },\n    photo: {\n      value: ['product', 'imageUrl'],\n      mods: ['addPrefixHttp']\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (newlook);\n\n//# sourceURL=webpack:///./src/assets/merchants/newlook.js?");
 
 /***/ }),
 
@@ -1492,19 +1492,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_mods_prefixProtocol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/mods/prefixProtocol.js */ \"./src/assets/mods/prefixProtocol.js\");\n/* harmony import */ var _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/mods/sliceFirstChar.js */ \"./src/assets/mods/sliceFirstChar.js\");\n/* harmony import */ var _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/mods/toInteger.js */ \"./src/assets/mods/toInteger.js\");\n\n\n\n\n\nconst modificators = {\n  prefixProtocol: _assets_mods_prefixProtocol_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  sliceFirstChar: _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  toInteger: _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (modificators);\n\n//# sourceURL=webpack:///./src/assets/modificators.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_mods_addPrefixHttp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/mods/addPrefixHttp.js */ \"./src/assets/mods/addPrefixHttp.js\");\n/* harmony import */ var _assets_mods_deletePrefixChrome_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/mods/deletePrefixChrome.js */ \"./src/assets/mods/deletePrefixChrome.js\");\n/* harmony import */ var _assets_mods_addPrefixDomain_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/mods/addPrefixDomain.js */ \"./src/assets/mods/addPrefixDomain.js\");\n/* harmony import */ var _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets/mods/sliceFirstChar.js */ \"./src/assets/mods/sliceFirstChar.js\");\n/* harmony import */ var _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/assets/mods/toInteger.js */ \"./src/assets/mods/toInteger.js\");\n\n\n\n\n\n\n\nconst modificators = {\n  addPrefixHttp: _assets_mods_addPrefixHttp_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  deletePrefixChrome: _assets_mods_deletePrefixChrome_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  sliceFirstChar: _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  toInteger: _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  addPrefixDomain: _assets_mods_addPrefixDomain_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (modificators);\n\n//# sourceURL=webpack:///./src/assets/modificators.js?");
 
 /***/ }),
 
-/***/ "./src/assets/mods/prefixProtocol.js":
-/*!*******************************************!*\
-  !*** ./src/assets/mods/prefixProtocol.js ***!
-  \*******************************************/
+/***/ "./src/assets/mods/addPrefixDomain.js":
+/*!********************************************!*\
+  !*** ./src/assets/mods/addPrefixDomain.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction prefixProtocol(value) {\n  return 'https:' + value;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (prefixProtocol);\n\n//# sourceURL=webpack:///./src/assets/mods/prefixProtocol.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction addPrefixHttp(value, merchant) {\n  return merchant.domain + value;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (addPrefixHttp);\n\n//# sourceURL=webpack:///./src/assets/mods/addPrefixDomain.js?");
+
+/***/ }),
+
+/***/ "./src/assets/mods/addPrefixHttp.js":
+/*!******************************************!*\
+  !*** ./src/assets/mods/addPrefixHttp.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction addPrefixHttp(value) {\n  return 'https://' + value;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (addPrefixHttp);\n\n//# sourceURL=webpack:///./src/assets/mods/addPrefixHttp.js?");
+
+/***/ }),
+
+/***/ "./src/assets/mods/deletePrefixChrome.js":
+/*!***********************************************!*\
+  !*** ./src/assets/mods/deletePrefixChrome.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction deletePrefixChrome(value) {\n  let result = value.slice(19);\n\n  while (result[0].match(/[a-zA-Z]/)) {\n    result = result.slice(1);\n  }\n\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (deletePrefixChrome);\n\n//# sourceURL=webpack:///./src/assets/mods/deletePrefixChrome.js?");
 
 /***/ }),
 
@@ -1636,7 +1660,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nclass Entry {\n  construc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/modificators.js */ \"./src/assets/modificators.js\");\n\n\n\n\nfunction applyMods(value, mods) {\n  let result = value;\n  mods.forEach(mod => {\n    Object.keys(_assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(modificator => {\n      if (modificator == mod) {\n        result = _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][modificator](result);\n      }\n    });\n  });\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (applyMods);\n\n//# sourceURL=webpack:///./src/modules/applyMods.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/modificators.js */ \"./src/assets/modificators.js\");\n\n\n\n\nfunction applyMods(value, mods, merchant) {\n  let result = value;\n  mods.forEach(mod => {\n    Object.keys(_assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(modificator => {\n      if (modificator == mod) {\n        result = _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][modificator](result, merchant);\n      }\n    });\n  });\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (applyMods);\n\n//# sourceURL=webpack:///./src/modules/applyMods.js?");
 
 /***/ }),
 
@@ -1684,7 +1708,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction getJsonValue(jso
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/parsers.js */ \"./src/assets/parsers.js\");\n\n\n\n\nfunction getParser(mode) {\n  let result = null;\n  Object.keys(_assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(key => {\n    if (mode == key) {\n      result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][key];\n    }\n  });\n\n  if (result === null) {\n    result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]['stub'];\n  }\n\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getParser);\n\n//# sourceURL=webpack:///./src/modules/getParser.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/parsers.js */ \"./src/assets/parsers.js\");\n\n\n\n\nfunction getParser(parserMode) {\n  let result = null;\n  Object.keys(_assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(key => {\n    if (parserMode == key) {\n      result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][key];\n    }\n  });\n\n  if (result === null) {\n    result = _assets_parsers_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]['stub'];\n  }\n\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getParser);\n\n//# sourceURL=webpack:///./src/modules/getParser.js?");
 
 /***/ }),
 
@@ -1696,7 +1720,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/modules/getParser.js */ \"./src/modules/getParser.js\");\n\n\n\n\nasync function parse(merchant) {\n  let basket = {};\n  const parser = Object(_modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(merchant.rules.mode);\n  basket = await parser(merchant);\n  return basket;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parse);\n\n//# sourceURL=webpack:///./src/modules/parse.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/modules/getParser.js */ \"./src/modules/getParser.js\");\n\n\n\n\nasync function parse(merchant) {\n  let basket = {};\n  const parser = Object(_modules_getParser_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(merchant.rules.parserMode);\n  basket = await parser(merchant);\n  return basket;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parse);\n\n//# sourceURL=webpack:///./src/modules/parse.js?");
 
 /***/ }),
 

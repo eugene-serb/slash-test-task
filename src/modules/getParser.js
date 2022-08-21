@@ -2,11 +2,11 @@
 
 import parsers from '@/assets/parsers.js';
 
-function getParser(mode) {
+function getParser(parserMode) {
   let result = null;
 
   Object.keys(parsers).forEach(key => {
-    if (mode == key) {
+    if (parserMode == key) {
       result = parsers[key];
     }
   });

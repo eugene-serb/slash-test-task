@@ -1,13 +1,17 @@
 'use strict';
 
-import prefixProtocol from '@/assets/mods/prefixProtocol.js';
+import addPrefixHttp from '@/assets/mods/addPrefixHttp.js';
+import deletePrefixChrome from '@/assets/mods/deletePrefixChrome.js';
+import addPrefixDomain from '@/assets/mods/addPrefixDomain.js';
 import sliceFirstChar from '@/assets/mods/sliceFirstChar.js';
 import toInteger from '@/assets/mods/toInteger.js';
 
 const modificators = {
-  prefixProtocol: prefixProtocol,
+  addPrefixHttp: addPrefixHttp,
+  deletePrefixChrome: deletePrefixChrome,
   sliceFirstChar: sliceFirstChar,
-  toInteger: toInteger
+  toInteger: toInteger,
+  addPrefixDomain: addPrefixDomain
 };
 
 export default modificators;
