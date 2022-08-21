@@ -1552,7 +1552,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n // ������ ����������� �������� ���� �����\n\nasync function parseCustom(merchant) {\n  let totalSum = 1337;\n  const entries = [];\n  entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](1, `Custom Good at ${merchant.merchantId}`, 1337, 1337, 1, 'https://eugene-serb.github.io/img/apple-touch-icon.png'));\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseCustom);\n\n//# sourceURL=webpack:///./src/assets/parsers/custom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n\n\nasync function parseCustom(merchant) {\n  let totalSum = 1337;\n  const entries = [];\n  entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](1, `Custom Good at ${merchant.merchantId}`, 1337, 1337, 1, 'https://eugene-serb.github.io/img/apple-touch-icon.png'));\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseCustom);\n\n//# sourceURL=webpack:///./src/assets/parsers/custom.js?");
 
 /***/ }),
 
@@ -1564,7 +1564,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n\n\n // ������ ��������\n\nasync function\n  /* merchant */\nparseDefault() {\n  let totalSum = 0;\n  const entries = [];\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseDefault);\n\n//# sourceURL=webpack:///./src/assets/parsers/default.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n\n\n\n\nasync function parseDefault() {\n  let totalSum = 0;\n  const entries = [];\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseDefault);\n\n//# sourceURL=webpack:///./src/assets/parsers/default.js?");
 
 /***/ }),
 
