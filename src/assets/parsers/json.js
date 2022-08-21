@@ -3,6 +3,7 @@
 import Basket from '@/models/Basket.js';
 import Entry from '@/models/Entry.js';
 import getJsonValue from '@/modules/getJsonValue.js';
+import applyMods from '@/modules/applyMods.js';
 
 async function parseJson(merchant) {
   let totalSum = 0;
@@ -13,21 +14,39 @@ async function parseJson(merchant) {
       return response.json();
     })
     .then(json => {
-      totalSum = getJsonValue(json, merchant.rules.totalSum);
-      return getJsonValue(json, merchant.rules.list);
+      totalSum = applyMods(
+        getJsonValue(json, merchant.rules.totalSum.value),
+        merchant.rules.totalSum.value
+      );
+      return getJsonValue(json, merchant.rules.list.value);
     })
     .then(goods => {
       goods.forEach(good => {
-        entries.push(
-          new Entry(
-            getJsonValue(good, merchant.rules.good.sku),
-            getJsonValue(good, merchant.rules.good.name),
-            getJsonValue(good, merchant.rules.good.price),
-            getJsonValue(good, merchant.rules.good.totalPrice),
-            getJsonValue(good, merchant.rules.good.quantity),
-            'https:' + getJsonValue(good, merchant.rules.good.photo) // костыль мод
-          )
+        const sku = applyMods(
+          getJsonValue(good, merchant.rules.sku.value),
+          merchant.rules.sku.mods
         );
+        const name = applyMods(
+          getJsonValue(good, merchant.rules.name.value),
+          merchant.rules.name.mods
+        );
+        const price = applyMods(
+          getJsonValue(good, merchant.rules.price.value),
+          merchant.rules.price.mods
+        );
+        const totalPrice = applyMods(
+          getJsonValue(good, merchant.rules.totalPrice.value),
+          merchant.rules.totalPrice.mods
+        );
+        const quantity = applyMods(
+          getJsonValue(good, merchant.rules.quantity.value),
+          merchant.rules.quantity.mods
+        );
+        const photo = applyMods(
+          getJsonValue(good, merchant.rules.photo.value),
+          merchant.rules.photo.mods
+        );
+        entries.push(new Entry(sku, name, price, totalPrice, quantity, photo));
       });
     })
     .catch(error => {

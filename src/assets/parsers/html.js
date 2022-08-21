@@ -2,6 +2,7 @@
 
 import Basket from '@/models/Basket.js';
 import Entry from '@/models/Entry.js';
+import applyMods from '@/modules/applyMods.js';
 
 async function parseHtml(merchant) {
   let totalSum = 0;
@@ -17,36 +18,44 @@ async function parseHtml(merchant) {
       return doc;
     })
     .then(doc => {
-      const list = doc.querySelector(merchant.rules.list);
-      totalSum = doc
-        .querySelector(merchant.rules.totalSum)
-        .innerText.toString()
-        .slice(1); // костыль мод;
+      const list = doc.querySelector(merchant.rules.list.value);
+      totalSum = applyMods(
+        doc.querySelector(merchant.rules.totalSum.value).innerText,
+        merchant.rules.totalSum.mods
+      );
       return list;
     })
     .then(list => {
-      const goods = list.querySelectorAll(merchant.rules.good.self);
+      const goods = list.querySelectorAll(merchant.rules.self.value);
       return goods;
     })
     .then(goods => {
       goods.forEach(good => {
-        entries.push(
-          new Entry(
-            good.querySelector(merchant.rules.good.sku).innerText,
-            good.querySelector(merchant.rules.good.name).innerText,
-            good
-              .querySelector(merchant.rules.good.price)
-              .innerText.toString()
-              .slice(1), // костыль мод
-            good
-              .querySelector(merchant.rules.good.totalPrice)
-              .innerText.toString()
-              .slice(1), // костыль мод
-            +good.querySelector(merchant.rules.good.quantity).innerText,
-            // костыль мод
-            good.querySelector(merchant.rules.good.photo).src
-          )
+        const sku = applyMods(
+          good.querySelector(merchant.rules.sku.value).innerText,
+          merchant.rules.sku.mods
         );
+        const name = applyMods(
+          good.querySelector(merchant.rules.name.value).innerText,
+          merchant.rules.name.mods
+        );
+        const price = applyMods(
+          good.querySelector(merchant.rules.price.value).innerText,
+          merchant.rules.price.mods
+        );
+        const totalPrice = applyMods(
+          good.querySelector(merchant.rules.totalPrice.value).innerText,
+          merchant.rules.totalPrice.mods
+        );
+        const quantity = applyMods(
+          good.querySelector(merchant.rules.quantity.value).innerText,
+          merchant.rules.quantity.mods
+        );
+        const photo = applyMods(
+          good.querySelector(merchant.rules.photo.value).src,
+          merchant.rules.photo.mods
+        );
+        entries.push(new Entry(sku, name, price, totalPrice, quantity, photo));
       });
     })
     .catch(error => {

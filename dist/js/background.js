@@ -1456,7 +1456,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  merchantId: 'converse',\n  domain: 'https://www.converse.com/uk',\n  rules: {\n    mode: 'html',\n    url: 'https://www.converse.com/uk/en/cart',\n    totalSum: '.order-totals__highlight > .value--highlight',\n    list: '.cart__items',\n    good: {\n      self: '.cart__item',\n      sku: '.product-mini__sku > span.value',\n      name: '.product-mini__name > a',\n      price: '.product-price--sales',\n      totalPrice: '.product-price--sales',\n      quantity: '.cart__item-qty > select > option[selected]',\n      photo: '.product-mini__image-url > img'\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (converse);\n\n//# sourceURL=webpack:///./src/assets/merchants/converse.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst converse = {\n  merchantId: 'converse',\n  domain: 'https://www.converse.com/uk',\n  rules: {\n    mode: 'html',\n    url: 'https://www.converse.com/uk/en/cart',\n    list: {\n      value: '.cart__items',\n      mods: []\n    },\n    totalSum: {\n      value: '.order-totals__highlight > .value--highlight',\n      mods: ['sliceFirstChar']\n    },\n    self: {\n      value: '.cart__item',\n      mods: []\n    },\n    sku: {\n      value: '.product-mini__sku > span.value',\n      mods: []\n    },\n    name: {\n      value: '.product-mini__name > a',\n      mods: []\n    },\n    price: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    totalPrice: {\n      value: '.product-price--sales',\n      mods: ['sliceFirstChar']\n    },\n    quantity: {\n      value: '.cart__item-qty > select > option[selected]',\n      mods: ['toInteger']\n    },\n    photo: {\n      value: '.product-mini__image-url > img',\n      mods: []\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (converse);\n\n//# sourceURL=webpack:///./src/assets/merchants/converse.js?");
 
 /***/ }),
 
@@ -1480,7 +1480,55 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst custom = {\n  merch
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merchantId: 'newlook',\n  domain: 'https://www.newlook.com/uk/',\n  rules: {\n    mode: 'json',\n    url: 'https://www.newlook.com/uk/json/cart/currentCart.json',\n    totalSum: ['data', 'totalPrice', 'value'],\n    list: ['data', 'entries'],\n    good: {\n      sku: ['product', 'sku'],\n      name: ['product', 'name'],\n      price: ['basePrice', 'value'],\n      totalPrice: ['totalPrice', 'value'],\n      quantity: ['quantity'],\n      photo: ['product', 'imageUrl']\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (newlook);\n\n//# sourceURL=webpack:///./src/assets/merchants/newlook.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nconst newlook = {\n  merchantId: 'newlook',\n  domain: 'https://www.newlook.com/uk/',\n  rules: {\n    mode: 'json',\n    url: 'https://www.newlook.com/uk/json/cart/currentCart.json',\n    list: {\n      value: ['data', 'entries'],\n      mods: []\n    },\n    totalSum: {\n      value: ['data', 'totalPrice', 'value'],\n      mods: []\n    },\n    sku: {\n      value: ['product', 'sku'],\n      mods: []\n    },\n    name: {\n      value: ['product', 'name'],\n      mods: []\n    },\n    price: {\n      value: ['basePrice', 'value'],\n      mods: []\n    },\n    totalPrice: {\n      value: ['totalPrice', 'value'],\n      mods: []\n    },\n    quantity: {\n      value: ['quantity'],\n      mods: []\n    },\n    photo: {\n      value: ['product', 'imageUrl'],\n      mods: ['prefixProtocol']\n    }\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (newlook);\n\n//# sourceURL=webpack:///./src/assets/merchants/newlook.js?");
+
+/***/ }),
+
+/***/ "./src/assets/modificators.js":
+/*!************************************!*\
+  !*** ./src/assets/modificators.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_mods_prefixProtocol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/mods/prefixProtocol.js */ \"./src/assets/mods/prefixProtocol.js\");\n/* harmony import */ var _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/mods/sliceFirstChar.js */ \"./src/assets/mods/sliceFirstChar.js\");\n/* harmony import */ var _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/mods/toInteger.js */ \"./src/assets/mods/toInteger.js\");\n\n\n\n\n\nconst modificators = {\n  prefixProtocol: _assets_mods_prefixProtocol_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  sliceFirstChar: _assets_mods_sliceFirstChar_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  toInteger: _assets_mods_toInteger_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (modificators);\n\n//# sourceURL=webpack:///./src/assets/modificators.js?");
+
+/***/ }),
+
+/***/ "./src/assets/mods/prefixProtocol.js":
+/*!*******************************************!*\
+  !*** ./src/assets/mods/prefixProtocol.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction prefixProtocol(value) {\n  return 'https:' + value;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (prefixProtocol);\n\n//# sourceURL=webpack:///./src/assets/mods/prefixProtocol.js?");
+
+/***/ }),
+
+/***/ "./src/assets/mods/sliceFirstChar.js":
+/*!*******************************************!*\
+  !*** ./src/assets/mods/sliceFirstChar.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction sliceFirstChar(value) {\n  return value.slice(1);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (sliceFirstChar);\n\n//# sourceURL=webpack:///./src/assets/mods/sliceFirstChar.js?");
+
+/***/ }),
+
+/***/ "./src/assets/mods/toInteger.js":
+/*!**************************************!*\
+  !*** ./src/assets/mods/toInteger.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\nfunction toInteger(value) {\n  return +value;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (toInteger);\n\n//# sourceURL=webpack:///./src/assets/mods/toInteger.js?");
 
 /***/ }),
 
@@ -1528,7 +1576,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n\n\n\n\n\nasync function parseHtml(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.text();\n  }).then(html => {\n    const parser = new DOMParser();\n    const doc = parser.parseFromString(html, 'text/html');\n    return doc;\n  }).then(doc => {\n    const list = doc.querySelector(merchant.rules.list);\n    totalSum = doc.querySelector(merchant.rules.totalSum).innerText.toString().slice(1); // костыль мод;\n\n    return list;\n  }).then(list => {\n    const goods = list.querySelectorAll(merchant.rules.good.self);\n    return goods;\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](good.querySelector(merchant.rules.good.sku).innerText, good.querySelector(merchant.rules.good.name).innerText, good.querySelector(merchant.rules.good.price).innerText.toString().slice(1), // костыль мод\n      good.querySelector(merchant.rules.good.totalPrice).innerText.toString().slice(1), // костыль мод\n      +good.querySelector(merchant.rules.good.quantity).innerText, // костыль мод\n      good.querySelector(merchant.rules.good.photo).src));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseHtml);\n\n//# sourceURL=webpack:///./src/assets/parsers/html.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n/* harmony import */ var _modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/applyMods.js */ \"./src/modules/applyMods.js\");\n\n\n\n\n\n\nasync function parseHtml(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.text();\n  }).then(html => {\n    const parser = new DOMParser();\n    const doc = parser.parseFromString(html, 'text/html');\n    return doc;\n  }).then(doc => {\n    const list = doc.querySelector(merchant.rules.list.value);\n    totalSum = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(doc.querySelector(merchant.rules.totalSum.value).innerText, merchant.rules.totalSum.mods);\n    return list;\n  }).then(list => {\n    const goods = list.querySelectorAll(merchant.rules.self.value);\n    return goods;\n  }).then(goods => {\n    goods.forEach(good => {\n      const sku = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.sku.value).innerText, merchant.rules.sku.mods);\n      const name = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.name.value).innerText, merchant.rules.name.mods);\n      const price = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.price.value).innerText, merchant.rules.price.mods);\n      const totalPrice = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.totalPrice.value).innerText, merchant.rules.totalPrice.mods);\n      const quantity = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.quantity.value).innerText, merchant.rules.quantity.mods);\n      const photo = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good.querySelector(merchant.rules.photo.value).src, merchant.rules.photo.mods);\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](sku, name, price, totalPrice, quantity, photo));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseHtml);\n\n//# sourceURL=webpack:///./src/assets/parsers/html.js?");
 
 /***/ }),
 
@@ -1540,7 +1588,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n/* harmony import */ var _modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/getJsonValue.js */ \"./src/modules/getJsonValue.js\");\n\n\n\n\n\n\nasync function parseJson(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.json();\n  }).then(json => {\n    totalSum = Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.totalSum);\n    return Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.list);\n  }).then(goods => {\n    goods.forEach(good => {\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.sku), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.name), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.price), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.totalPrice), Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.quantity), 'https:' + Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.good.photo) // ������� ���\n      ));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseJson);\n\n//# sourceURL=webpack:///./src/assets/parsers/json.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/models/Basket.js */ \"./src/models/Basket.js\");\n/* harmony import */ var _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/models/Entry.js */ \"./src/models/Entry.js\");\n/* harmony import */ var _modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/modules/getJsonValue.js */ \"./src/modules/getJsonValue.js\");\n/* harmony import */ var _modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/modules/applyMods.js */ \"./src/modules/applyMods.js\");\n\n\n\n\n\n\n\nasync function parseJson(merchant) {\n  let totalSum = 0;\n  const entries = [];\n  await fetch(merchant.rules.url).then(response => {\n    return response.json();\n  }).then(json => {\n    totalSum = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.totalSum.value), merchant.rules.totalSum.value);\n    return Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(json, merchant.rules.list.value);\n  }).then(goods => {\n    goods.forEach(good => {\n      const sku = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.sku.value), merchant.rules.sku.mods);\n      const name = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.name.value), merchant.rules.name.mods);\n      const price = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.price.value), merchant.rules.price.mods);\n      const totalPrice = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.totalPrice.value), merchant.rules.totalPrice.mods);\n      const quantity = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.quantity.value), merchant.rules.quantity.mods);\n      const photo = Object(_modules_applyMods_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Object(_modules_getJsonValue_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(good, merchant.rules.photo.value), merchant.rules.photo.mods);\n      entries.push(new _models_Entry_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](sku, name, price, totalPrice, quantity, photo));\n    });\n  }).catch(error => {\n    // eslint-disable-next-line\n    console.error(error);\n  });\n  return new _models_Basket_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](entries, totalSum);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (parseJson);\n\n//# sourceURL=webpack:///./src/assets/parsers/json.js?");
 
 /***/ }),
 
@@ -1577,6 +1625,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\nclass Basket {\n  constru
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n\n\nclass Entry {\n  constructor(sku, name, price, totalPrice, quantity, photo) {\n    this.sku = sku;\n    this.name = name;\n    this.price = price;\n    this.totalPrice = totalPrice;\n    this.quantity = quantity;\n    this.photo = photo;\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Entry);\n\n//# sourceURL=webpack:///./src/models/Entry.js?");
+
+/***/ }),
+
+/***/ "./src/modules/applyMods.js":
+/*!**********************************!*\
+  !*** ./src/modules/applyMods.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/assets/modificators.js */ \"./src/assets/modificators.js\");\n\n\n\n\nfunction applyMods(value, mods) {\n  let result = value;\n  mods.forEach(mod => {\n    Object.keys(_assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).forEach(modificator => {\n      if (modificator == mod) {\n        result = _assets_modificators_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][modificator](result);\n      }\n    });\n  });\n  return result;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (applyMods);\n\n//# sourceURL=webpack:///./src/modules/applyMods.js?");
 
 /***/ }),
 
