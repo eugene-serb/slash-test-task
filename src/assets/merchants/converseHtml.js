@@ -4,7 +4,7 @@ const converse = {
   merchantId: 'converse',
   domain: 'https://www.converse.com/uk',
   rules: {
-    parserMode: 'deepHtml',
+    parserMode: 'html',
     url: 'https://www.converse.com/uk/en/cart',
     list: {
       value: '.cart__items',
@@ -28,11 +28,7 @@ const converse = {
     },
     price: {
       value: '.product-price--sales',
-      mods: ['sliceFirstChar', 'sliceFirstChar'],
-      deep: {
-        value: '.product-price > .product-price--sales',
-        container: 'innerText'
-      }
+      mods: ['sliceFirstChar']
     },
     totalPrice: {
       value: '.product-price--sales',
@@ -45,10 +41,6 @@ const converse = {
     photo: {
       value: '.product-mini__image-url > img',
       mods: []
-    },
-    deepUrl: {
-      value: '.product-mini__name > a',
-      mods: ['deletePrefixChrome', 'addPrefixDomain']
     }
   }
 };
