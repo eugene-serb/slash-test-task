@@ -30,6 +30,12 @@ telegram – https://t.me/eugene_serb
     * Модели используемых объектов.
   * /src/modules/
     * Модули и подпрограммы.
+  * /src/popup/
+    * Vue.
+  * /src/components/
+    * Vue компоненты.
+  * /src/background/
+    * Extension index and event listener.
 
 ## Как добавить нового продавца
   * Описать карточку продавца, например, как в '@/assets/merchants/custom.js'.
